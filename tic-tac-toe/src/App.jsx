@@ -36,6 +36,12 @@ export default function Board() {
 
   return (
     <>
+      <button className='resetButton' onClick={() => {
+        const resetSquares = [null, null, null, null, null, null, null, null, null];
+        setSquares(resetSquares);
+      }}>
+        reset
+      </button>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
