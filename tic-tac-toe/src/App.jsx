@@ -10,7 +10,11 @@ function Square({ value, onSquareClick }) {
 
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState([
+    null, null, null,
+    null, null, null,
+    null, null, null
+  ]);
 
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
@@ -54,7 +58,7 @@ export default function Board() {
         <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
       </div>
       <div className="board-row">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+        <Square value={squaheitzlkires[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
